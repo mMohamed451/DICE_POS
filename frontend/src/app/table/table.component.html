@@ -1,0 +1,26 @@
+<main>
+  <table class="table">
+    <tr>
+      <th>الإسم</th>
+      <th>السعر</th>
+      <th>الكميه</th>
+      <th>المجموع</th>
+      <th>x</th>
+    </tr>
+    <tr *ngFor=" let product of products$ | async">
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{(product.price * product.quantity)| number}}</td>
+      <td>
+        <span class="remove-btn" (click)="removeItemFromCart(product)"> x</span>
+      </td>
+    </tr>
+    <tr *ngIf="(products$ | async)?.length==0 ">
+      <td colspan="5" class="no-products">
+        لا يوجد
+      </td>
+    </tr>
+  </table>
+  <ng-content></ng-content>
+</main>

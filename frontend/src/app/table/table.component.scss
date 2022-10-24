@@ -1,0 +1,49 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    direction: rtl;
+    width: 780px;
+  }
+
+  table td,
+  table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  #customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  table tr:hover {
+    background-color: #ddd;
+  }
+
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007ad9;
+    ;
+    color: white;
+    text-align: center;
+  }
+
+  .no-products {
+    width: 100%;
+    text-align: center;
+  }
+
+  .remove-btn {
+    cursor: pointer !important;
+  }
+}

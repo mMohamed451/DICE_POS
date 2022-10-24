@@ -1,0 +1,20 @@
+<div class="container">
+  <section>
+    <app-table>
+      <div class="calculations">
+        <h3 class="summation">المجموع:</h3>
+        <h3 class="counter">{{ totalSum | number }}</h3>
+      </div>
+    </app-table>
+  </section>
+  <section>
+    <div class="products-container">
+      <app-item-card *ngFor="let product of fetchedProducts$ | async" [productName]="product.name"
+        [productPrice]="product.price" (click)="addToCart(product)">
+      </app-item-card>
+    </div>
+  </section>
+</div>
+
+<button class="purchase" (click)="submitOrder()">إتمام البيع</button>
+<button class="logout" (click)="logout()">تسجيل الخروج</button>

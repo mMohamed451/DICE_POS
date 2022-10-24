@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.products-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+}
+
+button {
+  position: fixed;
+  color: white;
+  border-color: transparent;
+  padding: 2rem 3rem;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &.purchase {
+    background: #007ad9;
+    right: 10px;
+    bottom: 5rem;
+  }
+
+  &.logout {
+    background: red;
+    left: 10px;
+    bottom: 5rem;
+  }
+}
+
+.no-products {
+  width: 100%;
+  text-align: center;
+}
+
+.calculations {
+  display: flex;
+  direction: rtl;
+  gap: 30px;
+  color: red;
+  font-weight: 600;
+}

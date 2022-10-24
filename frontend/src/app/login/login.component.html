@@ -1,0 +1,19 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+  </div>
+  <div class="example-card">
+    <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+      <h2>Log In</h2>
+      <label>
+        <input matInput placeholder="Username" formControlName="username">
+      </label>
+      <label>
+        <input type="password" matInput placeholder="Password" formControlName="password">
+      </label>
+
+      <div class="button-row">
+        <button type="submit" [disabled]="!loginForm.valid" mat-flat-button color="primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
